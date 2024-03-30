@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Tracker</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <h1>EDIT TAB</h1>
+  <form action="/update" method="post">
+    USER_TYPE: <input type="text" name="user_type" value="<%= result[0].ut_desc %>">
+    <button type="submit" name="user_id" value="<%= result[0].ut_id%>">edit</button>
+  </form>
+  </h2>
+</body>
+
+</html>

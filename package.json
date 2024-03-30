@@ -1,22 +1,22 @@
 {
-  "name": "tournament_management_system",
+  "name": "tournament_temp_folder",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js -e js,ejs"
+    "dev": "nodemon index.js -e js,ejs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
     "ejs": "^3.1.9",
-    "express": "^5.0.0-beta.2",
-    "jquery": "^3.7.1",
-    "mysql": "^2.18.1",
-    "oracledb": "^6.4.0",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
     "pg": "^8.11.3"
   }
 }
