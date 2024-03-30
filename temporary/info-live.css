@@ -1,0 +1,223 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #f1f1f1;
+}
+
+.desktop {
+    border: 1px solid #eee;
+    border-radius: 2rem;
+    margin: 1.5rem auto;
+    max-width: 1200px;
+    background: #ffffff;
+    font-family: "Poppins", sans-serif;
+    /* overflow: hidden; */
+}
+
+header {
+    background-color: #064dbb;
+    border-radius: 1.5rem;
+    font-family: "Gotham", sans-serif;
+    text-decoration: none;
+    color: white;
+    height: 12rem;
+    width: 100%;
+}
+
+.back {
+    font-size: 2rem;
+    font-family: "poppins";
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    padding-top: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+}
+
+nav img {
+    width: 3rem;
+    background-color: #ffffff;
+    padding: 0.4rem;
+    /* height: 3rem; */
+    border-radius: 7px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 12px 18px 0 rgba(200, 200, 200, 0.6);
+    margin: 1.5rem;
+}
+
+
+.result {
+    margin-top: -6rem;
+    padding: 1rem 1.5rem;
+}
+
+.result .subtitle {
+    margin-bottom: 1rem;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.team img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+}
+
+.winner {
+    color: rgb(0, 0, 0);
+}
+
+.loser {
+    color: #808080;
+}
+
+.score {
+    margin-left: auto;
+    text-align: right;
+}
+
+.overs {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.vs {
+    text-align: center;
+}
+
+.vs span {
+    display: inline-block;
+    background-color: #eee;
+    color: #666;
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+
+.result p:last-child {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1.5rem;
+}
+
+menu button {
+    border: none;
+    background: white;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+menu button.active {
+    color: #064dbb;
+    border-bottom: 4px solid #064dbb;
+}
+
+table {
+    text-align: right;
+    border-collapse: collapse;
+    /* display: flex;
+    justify-content: space-between; */
+    width: 96%;
+}
+
+thead {
+    color: rgb(39, 39, 39);
+    background: linear-gradient(to right, #6da7ff, #cbe0ff);
+}
+
+tbody {
+    color: #666;
+}
+
+tbody tr {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(n-1) {
+    background: linear-gradient(to bottom, #f6f5f5, white 70%, white);
+}
+
+tbody {
+    background-color: #064dbb;
+}
+
+th,
+td {
+    padding: 1rem 0.25rem;
+}
+
+thead th:first-child,
+tbody td:first-child {
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+tbody td:first-child {
+    color: #064dbb;
+    font-weight: 600;
+}
+
+.not-out,
+.bowling {
+    color: green;
+    background-color: #666;
+}
+
+thead th:last-child,
+tbody td:last-child {
+    padding-right: 1.5rem;
+}
+
+.pom {
+    overflow: visible;
+    margin: 1rem 1.5rem;
+    padding: 1rem 1.5rem;
+    width: auto;
+    position: relative;
+    height: 10rem;
+}
+
+.pom img {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    height: 11rem;
+}
+
+/* .pom h2 {} */
+
+.pom .name {
+    font-size: 1.25rem;
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="info-live.css">
+    <title>Cricket Score App</title>
+</head>
+
+<body>
+    <div class="desktop">
+        <header>
+            <nav>
+                <a class="back" href="index.html">❮</a>
+                <h1>Ahmedabad University League | Match 4</h1>
+                <img src="ipl.png" alt="">
+            </nav>
+        </header>
+
+        <section class="result card">
+            <h2>Match 4</h2>
+            <p class="subtitle">Ahmedabad University League</p>
+            <div class="team loser">
+                <img src="bbl.png" alt="srilanka">
+                <span>Sri Lanka</span>
+                <div class="score">
+                    <div class="runs">274/6</div>
+                    <div class="overs">(50 ov)</div>
+                </div>
+            </div>
+            <div class="vs"><span>vs</span></div>
+            <div class="team winner">
+                <img src="bbl.png" alt="srilanka">
+                <span>India</span>
+                <div class="score">
+                    <div class="runs">277/4</div>
+                    <div class="overs">(target 275, 48.2/50 ov)</div>
+                </div>
+            </div>
+            <p class="summary-text">India won by 6 wickets (with 10 balls remaining)</p>
+        </section>
+
+        <section class="live">
+            <menu class="card">
+                <button id="live-tab" class="active" onclick="showTab('live')">Live</button>
+                <button id="scorecard-tab" onclick="showTab('scorecard')">Scorecard</button>
+            </menu>
+
+            <table class="card" id="live-content">
+                <thead>
+                    <tr>
+                        <th>Batsman</th>
+                        <th>Runs</th>
+                        <th>Balls</th>
+                        <th>4s</th>
+                        <th>6s</th>
+                        <th>SR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MS Dhoni (c) †</td>
+                        <td>91</td>
+                        <td>79</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>115.2</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>21</td>
+                        <td>24</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>87.5</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Bowler</th>
+                        <th>Overs</th>
+                        <th>Maiden</th>
+                        <th>Runs</th>
+                        <th>Wickets</th>
+                        <th>Eco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kulasekara</td>
+                        <td>8.2</td>
+                        <td>0</td>
+                        <td>64</td>
+                        <td>0</td>
+                        <td>8.1</td>
+                    </tr>
+                    <tr>
+                        <td>Malinga</td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>42</td>
+                        <td>2</td>
+                        <td>4.6</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="card" id="scorecard-content" style="display:none;">
+                <!-- Scorecard content here -->
+                <thead>
+                    <tr>
+                        <th>Batsman</th>
+                        <th>Wicket</th>
+                        <th>Runs</th>
+                        <th>Balls</th>
+                        <th>4s</th>
+                        <th>6s</th>
+                        <th>SR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MS Dhoni (c)</td>
+                        <td>c Malinga b Murlidharan</td>
+                        <td>91</td>
+                        <td>79</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>115.2</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>b Malinga</td>
+                        <td>21</td>
+                        <td>24</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>87.5</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>Run Out</td>
+                        <td>21</td>
+                        <td>24</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>87.5</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>b Malinga</td>
+                        <td>21</td>
+                        <td>24</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>87.5</td>
+                    </tr>
+                    <tr class="not-out">
+                        <td>Yuvraj</td>
+                        <td>Not Out</td>
+                        <td>21</td>
+                        <td>24</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>87.5</td>
+                    </tr>
+                    <tr class="not-out">
+                        <td>Yuvraj</td>
+                        <td>Not Out</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>Yet to bat</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>Yet to bat</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>Yet to bat</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>Yet to bat</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Yuvraj</td>
+                        <td>Yet to bat</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Bowler</th>
+                        <th></th>
+                        <th>Overs</th>
+                        <th>Maiden</th>
+                        <th>Runs</th>
+                        <th>Wickets</th>
+                        <th>Eco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bowling">
+                        <td>Kulasekara</td>
+                        <th></th>
+                        <td>8.2</td>
+                        <td>0</td>
+                        <td>64</td>
+                        <td>0</td>
+                        <td>8.1</td>
+                    </tr>
+                    <tr>
+                        <td>Malinga</td>
+                        <th></th>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>42</td>
+                        <td>2</td>
+                        <td>4.6</td>
+                    </tr>
+                    <tr>
+                        <td>Malinga</td>
+                        <th></th>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>42</td>
+                        <td>2</td>
+                        <td>4.6</td>
+                    </tr>
+                    <tr>
+                        <td>Malinga</td>
+                        <th></th>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Malinga</td>
+                        <th></th>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Malinga</td>
+                        <th></th>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="pom card">
+            <h2>Player Of The Match</h2>
+            <img src="player-dhoni.png" alt="ms dhoni">
+            <p class="name"><strong>MS Dhoni</strong></p>
+            <p>India</p>
+        </section>
+    </div>
+
+    <script src="info-live.js"></script>
+</body>
+
+</html>

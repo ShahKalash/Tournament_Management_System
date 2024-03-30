@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="info-live-admin.css">
+    <title>Cricket Score Admin</title>
+</head>
+
+<body>
+    <div class="admin">
+        <header>
+            <h1>Cricket Score Admin</h1>
+        </header>
+
+        <section class="input-form">
+            <form id="score-form">
+                <label for="run-type">Select Run Type:</label>
+                <select id="run-type">
+                    <option value="0">0 Run</option>
+                    <option value="1">1 Run</option>
+                    <option value="2">2 Runs</option>
+                    <option value="3">3 Runs</option>
+                    <option value="4">4 Runs</option>
+                    <option value="6">6 Runs</option>
+                    <option value="wide">Wide</option>
+                    <option value="no-ball">No Ball</option>
+                    <option value="out">Out</option>
+                    <option value="out-run">Out and Run</option>
+                </select>
+
+                <button type="submit">Add Run</button>
+                <button type="button" id="undo-btn">Undo</button>
+            </form>
+        </section>
+
+        <section class="live-score">
+            <h2>Live Score</h2>
+            <div id="live-score"></div>
+        </section>
+    </div>
+
+    <script src="info-live-admin.js"></script>
+</body>
+
+</html>
