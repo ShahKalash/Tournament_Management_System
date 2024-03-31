@@ -11,6 +11,13 @@
 </head>
 
 <body>
+  <% if(locals.bflag) { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      User Type already exists!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% } %>
+
   <form action="/add" method="post">
     <input type="text" name="user_type">
     <button type="submit">Add</button>
