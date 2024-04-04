@@ -129,10 +129,11 @@ app.post("/edit", async (req, res) => {
 
 app.post("/update", async (req, res) => {
     const id = req.body.user_id;
-    const u_type = req.body.user_type;
+    let u_type = req.body.user_type;
 
     // console.log(id);
     // console.log(u_type);
+    u_type = u_type.toUpperCase();
     try {
         await db.query(
             "UPDATE USER_TYPE SET UT_DESC = ($1) WHERE UT_ID = $2",

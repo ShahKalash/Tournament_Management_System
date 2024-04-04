@@ -2,6 +2,227 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cricket App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu-icon">&#9776;</div>
+            <h1 class="title">My Cricket App</h1>
+        </div>
+        <div class="row">
+            <div class="column profile-column">
+                <div class="profile">
+                    <img class="icon" src="images/user-profile-4255.svg" alt="User Profile">
+                    <div class="name">
+                        <h3>Welcome,</h3>
+                        <h1><span>Meet Suthar</span></h1>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column tagline-column">
+                <h2>Is cricket in your blood?
+                    You’re at perfect place!</h2>
+                <div class="imgbat"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column tournament-column">
+                <div class="heading">
+                    <a href="info-tournament.html">
+                        <h1>Tournaments</h1>
+                    </a>
+                </div>
+                <div class="logo-container">
+                    <img class="logo" src="images/ipl.png" alt="Logo">
+                    <div class="line"></div>
+                    <img class="logo" src="images/bbl.png" alt="Logo">
+                    <div class="line"></div>
+                    <img class="logo" src="images/ilt20.jpeg" alt="Logo">
+                    <div class="line"></div>
+                    <img class="logo" src="images/sa20.png" alt="Logo">
+                </div>
+            </div>
+            <div class="column register-column">
+                <div class="ball-image"><img class="logo" src="images/ipl.png" alt="Logo"></div>
+                <div class="reg-text">
+                    <h3>Start your own</h3>
+                    <h2>Tournament</h2>
+                    <button class="reg-btn" onclick="window.location.href = 'form-tournament.html';">Get
+                        Started</button>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column ongoing-column">
+                <h2>Ongoing Matches</h2>
+                <div class="matches">
+                    <div class="match-details">
+                        <div>
+                            <span> <img class="mch-logo" src="images/bbl.png" alt="Logo"> vs <img class="mch-logo"
+                                    src="images/bbl.png" alt="Logo"></span>
+                        </div>
+                        <div class="detail-runs">
+                            <span>160/4</span> <span>Overs 12.4/20</span>
+                        </div>
+                        <div class="detail-tour">
+                            <span>IPL 2024</span>
+                        </div>
+                        <div class="detail-venue">
+                            <span>Ahmedabad</span>
+                        </div>
+                    </div>
+                    <div class="match-details">
+                        <div>
+                            <span> <img class="mch-logo" src="images/bbl.png" alt="Logo"> vs <img class="mch-logo"
+                                    src="images/bbl.png" alt="Logo"></span>
+                        </div>
+                        <div class="detail-runs">
+                            <span>160/4</span> <span>Overs 12.4/20</span>
+                        </div>
+                        <div class="detail-tour">
+                            <span>IPL 2024</span>
+                        </div>
+                        <div class="detail-venue">
+                            <span>Ahmedabad</span>
+                        </div>
+                    </div>
+                    <div class="match-details">
+                        <div>
+                            <span> <img class="mch-logo" src="images/bbl.png" alt="Logo"> vs <img class="mch-logo"
+                                    src="images/bbl.png" alt="Logo"></span>
+                        </div>
+                        <div class="detail-runs">
+                            <span>160/4</span> <span>Overs 12.4/20</span>
+                        </div>
+                        <div class="detail-tour">
+                            <span>IPL 2024</span>
+                        </div>
+                        <div class="detail-venue">
+                            <span>Ahmedabad</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="column upcoming-column">
+                <h2>Upcoming Matches</h2>
+                <div class="matches">
+                    <div>
+                        <span> <img class="mch-logo" src="images/bbl.png" alt="Logo">
+                            vs <img class="mch-logo" src="images/bbl.png" alt="Logo"></span>
+                        <span>Tournament Name</span>
+                        <span>Venue</span>
+                    </div>
+                    <div>
+                        <span> <img class="mch-logo" src="images/bbl.png" alt="Logo">
+                            vs <img class="mch-logo" src="images/bbl.png" alt="Logo"></span>
+                        <span>Tournament Name</span>
+                        <span>Venue</span>
+                    </div>
+                    <div>
+                        <span> <img class="mch-logo" src="images/bbl.png" alt="Logo">
+                            vs <img class="mch-logo" src="images/bbl.png" alt="Logo"></span>
+                        <span>Tournament Name</span>
+                        <span>Venue</span>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <% if(locals.bflag) { %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          User Type already exists!
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% } %>
+    
+      <form action="/add" method="post">
+        <input type="text" name="user_type">
+        <button type="submit">Add</button>
+      </form>
+      </h2>
+    
+      <div class="container">
+        <table class="table w-50">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">user_type</th>
+              <th scope="col">update</th>
+              <th scope="col">delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% result.forEach(function(user, i){ %>
+              <tr>
+                <th>
+                  <%= i+1%>
+                </th>
+                <td>
+                  <%= user.ut_desc%>
+                </td>
+                <td>
+                  <form action="/edit" method="post">
+                    <button class="btn bg-secondary text-white" type="submit" name="user_id"
+                      value="<%= user.ut_id %>"><b>edit</b></button>
+                  </form>
+                </td>
+                <td>
+                  <form action="/delete" method="post">
+                    <button class="btn bg-danger text-white" type="submit" name="user_id"
+                      value="<%= user.ut_id %>"><b>x</b></button>
+                  </form>
+                </td>
+              </tr>
+              <% }); %>
+          </tbody>
+        </table>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TOURNAMENT MANAGEMENT SYSTEM</title>
@@ -66,4 +287,4 @@
 
 </body>
 
-</html>
+</html> -->
