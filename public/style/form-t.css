@@ -1,0 +1,136 @@
+:root {
+    --color4: #ffffff;
+    --color5: #00ab7d;
+    --bgcolor5: #b3ffeb;
+    --bgcolor5light: #ebfff9;
+    --color6: #2c7397;
+    --bgcolor6: #d6f1ff;
+    --color7: #ef476f;
+    --bgcolor7: #ffdce4;
+    --color8: #ffc642;
+    --bgcolor8: #fff4da;
+    --background-color: #ececec;
+}
+
+body {
+    font-family: "Gotham", sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--color5);
+    text-align: center;
+}
+
+form {
+    background-color: var(--color4);
+    padding: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 97%;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 0.6rem;
+}
+
+input[type="file"] {
+    width: auto;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 0.6rem;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 0.6rem;
+    background-color: var(--color5);
+}
+
+textarea {
+    resize: vertical;
+    border: 2px solid #ccc;
+    border-radius: 0.6rem;
+    height: 100px;
+}
+
+textarea:focus {
+    border-color: var(--color5);
+    outline: none;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus,
+select:focus {
+    border-color: var(--color5);
+    outline: none;
+    background-color: var(--bgcolor5light);
+}
+
+button {
+    background-color: var(--color5);
+    color: var(--color4);
+    padding: 10px 20px;
+    margin-right: 0.6rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color6);
+}
+
+.back-btn {
+    background-color: var(--color7);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: var(--color6);
+}

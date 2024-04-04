@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/form-t.css">
+    <title>Tournament Registration</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tournament Registration</h1>
+        <form>
+            <div class="form-group">
+                <label for="organiser-name">Organiser Name:</label>
+                <input type="text" id="organiser-name" name="organiser-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone No:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="tournament-name">Tournament Name:</label>
+                <input type="text" id="tournament-name" name="tournament-name" required>
+            </div>
+            <div class="form-group">
+                <label for="tournament-logo">Tournament Logo:</label>
+                <input type="file" id="tournament-logo" name="tournament-logo">
+            </div>
+            <div class="form-group">
+                <label for="tournament-description">Tournament Description:</label>
+                <textarea id="tournament-description" name="tournament-description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tournament-type">Tournament Type:</label>
+                <select id="tournament-type" name="tournament-type" required>
+                    <option value="">Select Type</option>
+                    <option value="8-overs">8 Overs</option>
+                    <option value="10-overs">10 Overs</option>
+                    <option value="12-overs">12 Overs</option>
+                    <option value="15-overs">15 Overs</option>
+                    <option value="20-overs">20 Overs</option>
+                    <option value="50-overs">50 Overs</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tournament-type">Ball Type:</label>
+                <select id="tournament-type" name="tournament-type" required>
+                    <option value="">Select Type</option>
+                    <option value="Matches-Ball">Matches Ball</option>
+                    <option value="Soft-Tennis-Ball">Soft-Tennis Ball</option>
+                    <option value="Hard-Tennis-Ball">Hard-Tennis Ball</option>
+                    <option value="Sponge-Ball">Sponge Ball</option>
+                    <option value="na">Not Declared</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="register-own-tournament">Do you want to register your own tournament?</label>
+                <input type="checkbox" id="register-own-tournament" name="register-own-tournament">
+            </div>
+            <button type="submit">Register</button>
+            <button class="back-btn" onclick="window.location.href = 'index.html';">Back</button>
+    </div>
+</body>
+
+</html>

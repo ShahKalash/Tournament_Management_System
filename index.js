@@ -10,7 +10,7 @@ const db = new pg.Client({
     user: "postgres",
     host: "localhost",
     database: "TOURNAMENT_MANAGEMENT",
-    password: "12345",
+    password: "Kalash@2911",
     port: 5432,
 });
 
@@ -29,8 +29,7 @@ app.get("/", async (req, res) => {
 
     console.log(req.query);
     let bflag = false;
-    if(req.query)
-    {
+    if (req.query) {
         bflag = req.query.dup_flag;
     }
 
@@ -38,23 +37,27 @@ app.get("/", async (req, res) => {
     console.log(bflag);
     console.log("end");
 
-    try
-    {
-    const temp = await db.query(
-        "SELECT * FROM USER_TYPE;"
-    );
+    try {
+        const temp = await db.query(
+            "SELECT * FROM USER_TYPE;"
+        );
 
-    let result = temp.rows;
-    // console.log(result);
-    // , 'bflag': bool_flag
-    res.render('index.ejs', { 'result': result, 'bflag': bflag});
+        let result = temp.rows;
+        // console.log(result);
+        // , 'bflag': bool_flag
+        res.render('index.ejs', { 'result': result, 'bflag': bflag });
     }
-    catch(e)
-    {
+    catch (e) {
         console.log(e);
     }
 });
 
+app.get('/form-player', async (req, res) => {
+    res.render('form-player.ejs');
+});
+app.get('/form-tournament', async (req, res) => {
+    res.render('form-tournament.ejs');
+});
 // app.get("/:first", async (req, res) => {
 
 //     let bool_flag = req.params.dup_flag;
@@ -68,7 +71,7 @@ app.get("/", async (req, res) => {
 
 //     let result = temp.rows;
 //     // console.log(result);
-    
+
 //     res.render('index.ejs', { 'result': result, 'bflag': bool_flag});
 //     }
 //     catch(e)
@@ -82,7 +85,7 @@ app.post("/add", async (req, res) => {
     input = input.toUpperCase();
 
     let temp = await db.query(
-        "SELECT * FROM USER_TYPE WHERE UPPER(UT_DESC) LIKE '%"+ input + "%';"
+        "SELECT * FROM USER_TYPE WHERE UPPER(UT_DESC) LIKE '%" + input + "%';"
     );
 
     console.log("a");
@@ -91,15 +94,13 @@ app.post("/add", async (req, res) => {
     console.log(result.length);
     console.log("a");
 
-    if(result.length > 0)
-    {
+    if (result.length > 0) {
         const query = queryString.stringify({
             "dup_flag": true
         });
         res.redirect('/?' + query);
     }
-    else
-    {
+    else {
         try {
             await db.query(
                 "INSERT INTO USER_TYPE (ut_desc) VALUES($1)",

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/form-player.css">
+    <title>Player Registration</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Player Registration</h1>
+        <form>
+            <!-- Part 1: Tournament Selection -->
+            <div class="form-section">
+                <h2>Team Selection</h2>
+                <div class="form-group">
+                    <label class="label-text" for="team">Select Team:</label>
+                    <select id="team" name="team" required>
+                        <option value="">Select Team</option>
+                        <!-- Populate options dynamically from database -->
+                        <option value="team1">Team 1</option>
+                        <option value="team2">Team 2</option>
+                        <option value="team3">Team 3</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Part 2: Basic Details -->
+            <div class="form-section">
+                <h2>Basic Details</h2>
+                <div class="form-group">
+                    <label class="label-text" for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label class="label-text" for="photo">Photo:</label>
+                    <input type="file" id="photo" name="photo">
+                </div>
+                <div class="form-group inline">
+                    <label class="label-text" for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group inline">
+                    <label class="label-text" for="phone">Phone No:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group inline">
+                    <label class="label-text" for="height">Height (cm):</label>
+                    <input type="number" id="height" name="height" required>
+                </div>
+                <div class="form-group inline">
+                    <label class="label-text" for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" name="weight" required>
+                </div>
+                <div class="form-group inline">
+                    <label class="label-text" for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label class="label-text" for="jersey">Jersey Number:</label>
+                    <input type="text" id="jersey" name="jersey" required>
+                </div>
+            </div>
+            <!-- Part 3: Player Details -->
+            <div class="form-section">
+                <h2>Player Details</h2>
+                <div class="form-group">
+                    <label class="label-text" for="captain">Captain?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="captain-yes" name="captain" value="yes">
+                        <label for="captain-yes">Yes</label>
+                        <input type="radio" id="captain-no" name="captain" value="no">
+                        <label for="captain-no">No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="label-text" for="wicketkeeper">Wicket Keeper?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="wicketkeeper-yes" name="wicketkeeper" value="yes">
+                        <label for="wicketkeeper-yes">Yes</label>
+                        <input type="radio" id="wicketkeeper-no" name="wicketkeeper" value="no">
+                        <label for="wicketkeeper-no">No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="label-text" for="batting-arm">Batting Arm:</label>
+                    <select id="batting-arm" name="batting-arm" required>
+                        <option value="">Select Batting Arm</option>
+                        <option value="spin">Right</option>
+                        <option value="pace">Left</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label-text" for="bowling-arm">Bowling Arm:</label>
+                    <select id="bowling-arm" name="bowling-arm" required>
+                        <option value="">Select Bowling Arm</option>
+                        <option value="spin">Right</option>
+                        <option value="pace">Left</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label-text" for="bowling-type">Bowling Type:</label>
+                    <select id="bowling-type" name="bowling-type" required>
+                        <option value="">Select Bowling Type</option>
+                        <option value="spin">Spin</option>
+                        <option value="pace">Pace</option>
+                        <option value="fast-medium">Fast Medium</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Add more details as needed -->
+            <button type="submit">Register</button>
+            <button class="back-button" onclick="window.location.href = 'index.html';">Back</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
