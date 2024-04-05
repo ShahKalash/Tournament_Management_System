@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style/form-t.css">
     <title>Tournament Registration</title>
 </head>
@@ -11,22 +13,65 @@
 <body>
     <div class="container">
         <h1>Tournament Registration</h1>
-        <form>
+        <!-- <form class="mb-5" action="/add_tournament" method="post">
             <div class="form-group">
-                <label for="organiser-name">Organiser Name:</label>
-                <input type="text" id="organiser-name" name="organiser-name" required>
+                <label for="tournament-name">Check availablity fo:</label>
+                <input type="text" id="tournament-name" name="t-name" placeholder="Example: Indian Premier League" required>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone No:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
+            
+            <button type="submit">Register</button>
+            <button class="back-btn" onclick="window.location.href = '/';">Back</button>
+        </form> -->
+        <form action="/add_tournament" method="post">
             <div class="form-group">
                 <label for="tournament-name">Tournament Name:</label>
-                <input type="text" id="tournament-name" name="tournament-name" required>
+                <input type="text" id="tournament-name" name="t-name" placeholder="Example: Indian Premier League" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="tournament-type">Tournament Type:</label>
+                <select id="tournament-type" name="t-type" required>
+                    <option value="">Select Type</option>
+
+                    <% tournament_type.forEach(function(type, i){%>
+
+                    <option value="<%= type.tty_id %>"><%= type.tty_desc %></option>
+
+                    <%}); %>
+
+                </select>
+            </div>
+            <div class="form-group inline">
+                <label class="label-text" for="tournament-start">Start Date:</label>
+                <input type="date" id="tournament-start" name="t-start" required>
+            </div>
+            <div class="form-group inline">
+                <label class="label-text" for="tournament-end">End Date:</label>
+                <input type="date" id="tournament-end" name="t-end" required>
+            </div>
+            <div class="form-group">
+                <label for="tournament-state">State:</label>
+                <select id="tournament-state" name="t-state" required>
+                    <option value="">Select Type</option>
+                        <% state_temp.forEach(function(state, i){%>
+                        <option value="<%= state.state_id %>"><%= state.state_name %></option>
+                        <%}); %>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="tournament-stadium">stadium:</label>
+                <select id="tournament-stadium" name="t-stadium" required>
+                    <option value="">Select Type</option>
+                        <% stadium_temp.forEach(function(stadium, i){%>
+                        <option value="<%= stadium.st_id %>"><%= stadium.st_name %></option>
+                        <%}); %>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tournament-teams">No. of Teams:</label>
+                <input type="text" id="tournament-teams" name="t-teams" placeholder="Example: 10" required>
             </div>
             <div class="form-group">
                 <label for="tournament-logo">Tournament Logo:</label>
@@ -34,37 +79,15 @@
             </div>
             <div class="form-group">
                 <label for="tournament-description">Tournament Description:</label>
-                <textarea id="tournament-description" name="tournament-description" required></textarea>
+                <textarea id="tournament-description" name="tournament-description" placeholder="some description about tournament..." required></textarea>
             </div>
-            <div class="form-group">
-                <label for="tournament-type">Tournament Type:</label>
-                <select id="tournament-type" name="tournament-type" required>
-                    <option value="">Select Type</option>
-                    <option value="8-overs">8 Overs</option>
-                    <option value="10-overs">10 Overs</option>
-                    <option value="12-overs">12 Overs</option>
-                    <option value="15-overs">15 Overs</option>
-                    <option value="20-overs">20 Overs</option>
-                    <option value="50-overs">50 Overs</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="tournament-type">Ball Type:</label>
-                <select id="tournament-type" name="tournament-type" required>
-                    <option value="">Select Type</option>
-                    <option value="Matches-Ball">Matches Ball</option>
-                    <option value="Soft-Tennis-Ball">Soft-Tennis Ball</option>
-                    <option value="Hard-Tennis-Ball">Hard-Tennis Ball</option>
-                    <option value="Sponge-Ball">Sponge Ball</option>
-                    <option value="na">Not Declared</option>
-                </select>
-            </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="register-own-tournament">Do you want to register your own tournament?</label>
                 <input type="checkbox" id="register-own-tournament" name="register-own-tournament">
-            </div>
+            </div> -->
             <button type="submit">Register</button>
-            <button class="back-btn" onclick="window.location.href = 'index.html';">Back</button>
+            <button class="back-btn" onclick="window.location.href = '/';">Back</button>
+        </form>
     </div>
 </body>
 
