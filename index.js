@@ -43,9 +43,20 @@ app.get("/", async (req, res) => {
         );
 
         let result = temp.rows;
+
+        const tournament_data = await db.query(
+            "SELECT * FROM tournament_tb;"
+        );
+
+        let result_tournament = tournament_data.rows;
+        console.log(`images/${result_tournament[0].t_logo}`);
+
+        
+
         // console.log(result);
         // , 'bflag': bool_flag
-        res.render('index.ejs', { 'result': result, 'bflag': bflag });
+        
+        res.render('index.ejs', { 'result': result, 'bflag': bflag, 't_data': result_tournament });
     }
     catch (e) {
         console.log(e);
@@ -225,23 +236,17 @@ app.get('/form-tournament', async (req, res) => {
 
         let result_tty = temp_tty.rows;
 
-        const temp_state = await db.query(
-            "SELECT * FROM state;"
+        const temp_city = await db.query(
+            "SELECT * FROM city;"
         );
 
-        let result_state = temp_state.rows;
+        let result_city = temp_city.rows;
 
-        const temp_stadiums = await db.query(
-            "SELECT * FROM stadium_tb;"
-        );
-
-        let result_stadiums = temp_stadiums.rows;
-        
         console.log(result_tty);
-        console.log(result_state);
-        console.log(result_stadiums);
+        console.log(result_city);
+
         // , 'bflag': bool_flag
-        res.render('form-tournament.ejs', {'tournament_type' : result_tty, 'state_temp' : result_state, 'stadium_temp': result_stadiums});
+        res.render('form-tournament.ejs', {'tournament_type' : result_tty, 'city_temp' : result_city});
     }
     catch (e) {
         console.log(e);
@@ -253,23 +258,20 @@ app.post("/add_tournament", async (req, res) => {
     let tournament_type = req.body["t-type"];
     let tournament_start = req.body["t-start"];
     let tournament_end = req.body["t-end"];
-    let tournament_state = req.body["t-state"];
+    let tournament_city = req.body["t-city"];
     let tournament_no_of_teams = req.body["t-teams"];
     let tournament_logo = req.body["tournament-logo"];
     let tournament_description = req.body["tournament-description"];
-    let tournament_stadium = req.body["t-stadium"];
-    
     // input = input.toUpperCase();
 
     console.log(tournament_name);
     console.log(tournament_type);
     console.log(tournament_start);
     console.log(tournament_end);
-    console.log(tournament_state);
+    console.log(tournament_city);
     console.log(tournament_no_of_teams);
     console.log(tournament_logo);
     console.log(tournament_description);
-    console.log(tournament_stadium);
 
     tournament_name = tournament_name.toUpperCase();
 
@@ -290,28 +292,16 @@ app.post("/add_tournament", async (req, res) => {
     //     res.redirect('/?' + query);
     // }
     // else {
-        // try {
-        //     await db.query(
-        //         "INSERT INTO tournament_tb (tty_id, t_title, t_startdate, t_enddate, t_state, t_logo, t_teams, t_desc) VALUES($1, $2, $3, $4, $5, $6, $7, $8)",
-        //         [tournament_type, tournament_name, tournament_start, tournament_end, tournament_state, tournament_logo, tournament_no_of_teams, tournament_description]
-        //     );
-
-        //     let result = await db.query(
-        //         "select * from tournament_tb where t_title = $1",
-        //         [tournament_name]
-        //     )
-
-        //     temp = result.rows;
-
-        //     await db.query(
-        //         "INSERT INTO tournament_stadium_contract (st_id, t_id) VALUES($1, $2)",
-        //         [tournament_stadium, temp[0].t_id]
-        //     );
-
-        //     res.redirect("/");
-        // } catch (err) {
-        //     console.log(err);
-        // }
+        try {
+            await db.query(
+                "INSERT INTO tournament_tb (tty_id, t_title, t_startdate, t_enddate, t_city, t_logo, t_teams, t_desc) VALUES($1, $2, $3, $4, $5, $6, $7, $8)",
+                [tournament_type, tournament_name, tournament_start, tournament_end, tournament_city, tournament_logo, tournament_no_of_teams, tournament_description]
+            );
+            
+            res.redirect("/");
+        } catch (err) {
+            console.log(err);
+        }
     // }
     // console.log(input);
 
@@ -322,7 +312,18 @@ app.get('/form-player', async (req, res) => {
     res.render('form-player.ejs');
 });
 
+app.get('/tournament',async (req, res) => {
+    res.render('tournament.ejs');
+});
 
+app.get('/match-form',async (req, res) => {
+    const temp_stadium = await db.query(
+        "SELECT * FROM stadium_tb;"
+    );
+
+    let result_stadium = temp_stadium.rows;
+    res.render('match-form.ejs', {'stadium_data' : result_stadium});
+})
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);

@@ -12,6 +12,7 @@
 
 <body>
     <div class="container">
+        <div class="bar error"><h2><b>Error:</b> Tournament end date must be after the start date.</h2></div>
         <h1>Tournament Registration</h1>
         <!-- <form class="mb-5" action="/add_tournament" method="post">
             <div class="form-group">
@@ -50,21 +51,11 @@
                 <input type="date" id="tournament-end" name="t-end" required>
             </div>
             <div class="form-group">
-                <label for="tournament-state">State:</label>
-                <select id="tournament-state" name="t-state" required>
+                <label for="tournament-city">City:</label>
+                <select id="tournament-city" name="t-city" required>
                     <option value="">Select Type</option>
-                        <% state_temp.forEach(function(state, i){%>
-                        <option value="<%= state.state_id %>"><%= state.state_name %></option>
-                        <%}); %>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="tournament-stadium">stadium:</label>
-                <select id="tournament-stadium" name="t-stadium" required>
-                    <option value="">Select Type</option>
-                        <% stadium_temp.forEach(function(stadium, i){%>
-                        <option value="<%= stadium.st_id %>"><%= stadium.st_name %></option>
+                        <% city_temp.forEach(function(city, i){%>
+                        <option value="<%= city.city_id %>"><%= city.city_name %></option>
                         <%}); %>
                 </select>
             </div>

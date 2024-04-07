@@ -26,6 +26,18 @@ body {
     padding: 20px;
 }
 
+.error {
+    color: #ba3939;
+    background: #ffe0e0;
+    border: 1px solid #a33a3a;
+    padding: 25px;
+}
+
+.error b{
+    color: red;
+}
+
+
 h1 {
     color: var(--color5);
     text-align: center;
